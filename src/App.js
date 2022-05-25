@@ -1,40 +1,30 @@
-import logo from './assets/images/logo.svg';
+import React, {Component} from 'react';
 import './assets/css/App.css';
 
 //Importar componentes
+import Header from './components/Header';
+import Slider from './components/Slider';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import SeccionPruebas from './components/SeccionPruebas';
 
-import MiComponente from "./components/MiComponente";
-import Peliculas from './components/Peliculas';
-
-function HolaMundo(nombre, edad){
-  let presentacion = ( 
-    <div>
-        <h2>Hola, soy {nombre}</h2>
-        <h3>Tengo {edad} años</h3>
-    </div> 
-  );
-  return presentacion;
-}
 
 function App() {
-  let nombre = "Carlos Martinez";
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola Bienvenido.
-        </p>
-        {HolaMundo(nombre, 27)}
 
-        <section className='componentes'>
+      <Header/>
 
-        <MiComponente />
-        <Peliculas/>
-      </section>
+      <Slider/>
+
+      <div className="center">
+        <SeccionPruebas/>
         
-      </header>
+        <Sidebar/>
+        <div className="clearfix"></div>
+      </div> {/* END DIV CENTER */}
+      <Footer/>
     </div>
   );
 }
