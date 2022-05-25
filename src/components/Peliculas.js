@@ -1,9 +1,13 @@
 import React, {Component} from "react";
+import MensajeEstatico from "./MensajeEstatico";
 
 class Peliculas extends Component{
     render(){
         return (
-            <h4>Soy el Componente de peliculas</h4>
+            <div id="peliculas">
+                <h4>Soy el Componente de peliculas</h4>
+                <MensajeEstatico/>
+            </div>
         );
     }
 }
