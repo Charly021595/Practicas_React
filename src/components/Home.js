@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import Slider from './Slider';
+import Slider from "./Slider";
+import Sidebar from "./Sidebar";
+
 
 class Home extends Component{
     render(){
@@ -9,9 +11,13 @@ class Home extends Component{
                 <Slider 
                     title="Bienvenido al Curso de React"
                     btn="Ir al blog"
+                    size="slider-big"
                 />
-                <div id="content">
-                    <h1 className="subheader">Ultimos articulos</h1>
+                <div className="center">
+                    <div id="content">
+                        <h1 className="subheader">Ultimos articulos</h1>
+                    </div>
+                    <Sidebar />
                 </div>
             </div>
         );
